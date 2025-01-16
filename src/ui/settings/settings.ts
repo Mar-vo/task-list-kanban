@@ -87,6 +87,16 @@ export class SettingsModal extends Modal {
 				});
 			});
 
+		new Setting(this.contentEl)
+			.setName("Show add note in default columns")
+			.setDesc("Show an add note button in the Uncategorized and Done columns")
+			.addToggle((toggle) => {
+				toggle.setValue(this.settings.showAddNoteInDefaultColumns ?? false);
+				toggle.onChange((value) => {
+					this.settings.showAddNoteInDefaultColumns = value;
+				});
+			});
+
 		new Setting(this.contentEl).addButton((btn) =>
 			btn.setButtonText("Save").onClick(() => {
 				this.close();

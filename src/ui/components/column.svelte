@@ -20,6 +20,7 @@
 	export let columnTagTableStore: Readable<ColumnTagTable>;
 	export let showFilepath: boolean;
 	export let consolidateTags: boolean;
+	export let showAddNote: boolean = true;
 
 	function getColumnTitle(
 		column: ColumnTag | DefaultColumns,
@@ -140,12 +141,10 @@
 						{consolidateTags}
 					/>
 				{/each}
-				{#if isColumnTag(column, columnTagTableStore)}
+				{#if showAddNote}
 					<button
 						on:click={async (e) => {
-							if (isColumnTag(column, columnTagTableStore)) {
-								await taskActions.addNew(column, e);
-							}
+							await taskActions.addNew(column, e);
 						}}
 					>
 						<span bind:this={buttonEl} />

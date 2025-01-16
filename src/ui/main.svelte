@@ -78,7 +78,8 @@
 		showFilepath = true, 
 		consolidateTags = false, 
 		uncategorizedVisibility = "auto",
-		doneVisibility = "always"
+		doneVisibility = "always",
+		showAddNoteInDefaultColumns = false
 	} = $settingsStore);
 
 	$: showUncategorizedColumn =
@@ -122,6 +123,7 @@
 				{columnTagTableStore}
 				{showFilepath}
 				{consolidateTags}
+				showAddNote={showAddNoteInDefaultColumns}
 			/>
 			{/if}
 			{#each columns as column}
@@ -132,6 +134,7 @@
 					{columnTagTableStore}
 					{showFilepath}
 					{consolidateTags}
+					showAddNote={true}
 				/>
 			{/each}
 			{#if showDoneColumn}
@@ -143,6 +146,7 @@
 				{columnTagTableStore}
 				{showFilepath}
 				{consolidateTags}
+				showAddNote={showAddNoteInDefaultColumns}
 			/>
 			{/if}
 		</div>
