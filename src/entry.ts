@@ -1,5 +1,6 @@
 import { App, MarkdownView, Plugin, TFile, WorkspaceLeaf } from "obsidian";
 import { KANBAN_VIEW_NAME, KanbanView } from "./ui/text_view";
+import { GlobalSettingTab } from "./ui/settings/global_settings_tab";
 
 interface GlobalSettings {
 	installedAtVersion?: string;
@@ -21,6 +22,8 @@ export default class Base extends Plugin {
 
 		// Load and merge settings with defaults
 		await this.loadGlobalSettings();
+
+		this.addSettingTab(new GlobalSettingTab(this.app, this));
 
 		this.switchToKanbanAfterLoad();
 
