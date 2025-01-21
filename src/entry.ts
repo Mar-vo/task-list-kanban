@@ -116,6 +116,22 @@ export default class Base extends Plugin {
 			return;
 		}
 
+		// if there is an installedAtVersion, it means the plugin was opened after the 1.3 update
+		// If the current version is up to date enough, it will not be included in dontApplyDefaultTaskLocationVersions,
+		// since a this is intended to hold some older versions that should not apply the default task location
+		// thus, the default task location will be applied if it has installedAtVersion and is not in the dontApplyDefaultTaskLocationVersions array
+		// TODO uncomment else if block to apply default task location
+
+		// Uncomment From here, adjust the version numbers as needed:
+		// const dontApplyDefaultTaskLocationVersions = ["1.3"];
+		// else if (
+		// 	!dontApplyDefaultTaskLocationVersions.includes(
+		// 		this.manifest.version
+		// 	)
+		// ) {
+		// 	settingsData.defaultTaskPath = "Tasks.md";
+		// }
+
 		this.globalSettings = {
 			...defaultGlobalSettings,
 			...settingsData,
