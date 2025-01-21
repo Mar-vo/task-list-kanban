@@ -9,7 +9,7 @@ import type { Task } from "./task";
 import type { Metadata } from "./tasks";
 import type { ColumnTag } from "../columns/columns";
 import { type Writable } from "svelte/store";
-import type { SettingValues } from "../settings/settings_store";
+import type { SettingValues } from "../settings/board_settings_store";
 import { get } from "svelte/store";
 
 export type TaskActions = {

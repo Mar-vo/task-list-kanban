@@ -1,10 +1,10 @@
 import { App, Modal, Setting } from "obsidian";
-import type { SettingValues } from "./settings_store";
+import type { SettingValues } from "./board_settings_store";
 import {
 	VisibilityOption,
 	ScopeOption,
 	defaultSettings,
-} from "../settings/settings_store";
+} from "./board_settings_store";
 import { z } from "zod";
 
 const VisibilityOptionSchema = z.nativeEnum(VisibilityOption);

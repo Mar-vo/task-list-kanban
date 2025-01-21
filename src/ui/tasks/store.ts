@@ -4,7 +4,7 @@ import { Task } from "./task";
 import { get, writable, type Readable, type Writable } from "svelte/store";
 import type { ColumnTagTable } from "../columns/columns";
 import { createTaskActions, type TaskActions } from "./actions";
-import type { SettingValues } from "../settings/settings_store";
+import type { SettingValues } from "../settings/board_settings_store";
 
 export function createTasksStore(
 	vault: Vault,

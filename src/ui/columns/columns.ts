@@ -1,7 +1,7 @@
 import type { Brand } from "src/brand";
 import { kebab } from "src/parsing/kebab/kebab";
 import { derived, get, type Readable, type Writable } from "svelte/store";
-import type { SettingValues } from "../settings/settings_store";
+import type { SettingValues } from "../settings/board_settings_store";
 
 export type DefaultColumns = "uncategorised" | "done";
 export type ColumnTag = Brand<string, "ColumnTag">;

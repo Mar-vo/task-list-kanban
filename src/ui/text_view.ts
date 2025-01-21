@@ -2,14 +2,14 @@ import { TextFileView, WorkspaceLeaf } from "obsidian";
 import matter from "front-matter";
 
 import Main from "./main.svelte";
-import { SettingsModal } from "./settings/settings";
+import { SettingsModal } from "./settings/board_settings";
 import {
 	createSettingsStore,
 	parseSettingsString,
 	toSettingsString,
 	ScopeOption,
 	type SettingValues,
-} from "./settings/settings_store";
+} from "./settings/board_settings_store";
 import { get, type Readable, type Writable } from "svelte/store";
 import { createTasksStore } from "./tasks/store";
 import type { Task } from "./tasks/task";
