@@ -10,7 +10,7 @@
 	import IconButton from "./components/icon_button.svelte";
 	import type { Writable, Readable } from "svelte/store";
 	import type { TaskActions } from "./tasks/actions";
-	import { type SettingValues, VisibilityOption } from "./settings/settings_store";
+	import { type SettingValues, VisibilityOption } from "./settings/board_settings_store";
 
 	export let tasksStore: Writable<Task[]>;
 	export let taskActions: TaskActions;
